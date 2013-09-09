@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++(AppDelegate *)getAppdelegate;
+-(void)setRootController:(id)controller;
 @end

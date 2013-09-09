@@ -12,3 +12,9 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define MAIN_DATABASE_NAME @"foodDatabase.sql"
+
+#define ContentViewHeight 504
+
+#define HeitiFont @"Helvetica-Bold"

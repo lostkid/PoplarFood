@@ -7,15 +7,39 @@
 //
 
 #import "AppDelegate.h"
+#import "DetailViewController.h"
+#import "DBConnection.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [DBConnection createEditableCopyOfDatabaseIfNeeded:NO];
+    [DBConnection getSharedDatabase];
+
+    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];    
+
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    [self.window setRootViewController:detailVC];
+    [self.window makeKeyAndVisible];
+    
+       
     return YES;
 }
-							
+
++ (AppDelegate *)getAppdelegate{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    return appDelegate;
+}
+
+//切换rootController
+-(void)setRootController:(id)controller{
+    self.window.rootViewController=nil;
+    [self.window setRootViewController:(UIViewController *)controller];
+    [self.window makeKeyAndVisible];
+
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

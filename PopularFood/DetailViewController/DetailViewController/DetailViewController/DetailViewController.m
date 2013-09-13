@@ -7,7 +7,6 @@
 //
 
 #import "DetailViewController.h"
-#import "SetViewController.h"
 #import "SetDetailViewController.h"
 
 @interface DetailViewController ()
@@ -43,18 +42,14 @@ static DetailViewController *_sharedInstance = nil;
     firstView.delegate = self;
     [self.rootView setNextUIView:firstView];
     [firstView setPreUIView:self.rootView];
+    firstView.backgroundColor=[UIColor clearColor];
     [self addSubView:firstView];
     
-    label =[[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    label.textColor =[UIColor blackColor];
-    [firstView addSubview:label];
+    UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    backgroundView.contentMode=UIViewContentModeScaleAspectFit;
+    backgroundView.frame=CGRectMake(0,44, self.view.frame.size.width, ContentViewHeight);
+    [firstView addSubview:backgroundView];
 
-    UIButton *popButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [popButton setFrame:CGRectMake(20, 120, 61, 44)];
-    [popButton setTitle:@"Pop1" forState:UIControlStateNormal];
-    [popButton addTarget:self action:@selector(popView:) forControlEvents:UIControlEventTouchUpInside];
-    [firstView addSubview:popButton];
-    
     
 }
 
@@ -72,35 +67,26 @@ static DetailViewController *_sharedInstance = nil;
 
 #pragma mark--切换SetViewController
 - (void)changeViewToSetView{
-    
-    SetViewController *setVC = [SetViewController sharedInstance];
-    
+    setVC = [SetViewController sharedInstance];
+
     if (setVC){
         
     }else{
         setVC = [[SetViewController alloc] init];
         setVC.view.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+        
     }
-    [firstView addSubview:setVC.view];
-    [self addChildViewController:setVC];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:setVC];
+    nav.view.frame=CGRectMake(0, 0, setVC.view.frame.size.width, setVC.view.frame.size.height);
+    [firstView addSubview:nav.view];
+    [self addChildViewController:nav];
     
-    isSetListView=YES;
-    if (isSetListView) {
-        SetDetailViewController *detailVC = [[SetDetailViewController alloc] init];
-        detailVC.view.frame=setVC.view.frame;
-        detailVC.secondView.delegate=self;
-        [firstView setNextUIView:detailVC.secondView];
-        [detailVC.secondView setPreUIView:firstView];
-        [self addSubView:detailVC.secondView];
-        [self addChildViewController:detailVC];
+    
 
-    }
 }
 
 #pragma mark--移除SetViewController
 -(void)removeSetView{
-
-    SetViewController *setVC = [SetViewController sharedInstance];
     
     if (setVC) {
         [setVC.view removeFromSuperview];

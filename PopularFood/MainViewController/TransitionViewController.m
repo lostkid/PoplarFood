@@ -121,9 +121,10 @@ static TransitionViewController *_sharedInstance = nil;
     Food *_food = food;
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     
-    detailImageView =[[DetailImageView alloc] initWithFrame:[keyWindow bounds] withImageUrl:_food.imageUrlStr];
-    detailImageView.delegate=self;
-    [keyWindow addSubview:detailImageView];
+        detailImageView =[[DetailImageView alloc] initWithFrame:[keyWindow bounds] withImageUrl:_food.imageUrlStr];
+        detailImageView.delegate=self;
+        [keyWindow addSubview:detailImageView];
+  
 }
 
 #pragma mark--

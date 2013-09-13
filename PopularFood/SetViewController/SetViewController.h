@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "UINavigationView.h"
-@interface SetViewController : UIViewController
+
+typedef NS_ENUM(NSUInteger, SetDetailViewType) {
+    DisclaimerType,
+    GradeType
+};
+
+@interface SetViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
-    
+    @private
+    NSArray *setArray;
 }
+@property(nonatomic) SetDetailViewType setType;
+
 +(SetViewController *)sharedInstance;
 
 @end

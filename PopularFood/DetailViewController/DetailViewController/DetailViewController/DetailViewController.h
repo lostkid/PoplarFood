@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "TransitionViewController.h"
 #import "Food.h"
+#import "SetViewController.h"
+
 
 @interface DetailViewController : TransitionViewController
 {
     @private UILabel *label;
         BOOL isSetListView;
+    NSArray *navigationTitles;
+    SetViewController *setVC;
+
 }
 @property(nonatomic,strong) Food *food;
 @property(nonatomic,strong) UINavigationView *firstView;
-
 
 +(DetailViewController *)sharedInstance;
 

@@ -77,7 +77,7 @@
     
     Food *food = [_foodListArray objectAtIndex:indexPath.row];
     Food *_food =[FoodInsertDatabase findIsLikeFoodFromLikeTable:food];
-    NSLog(@"food_id %d,food_is_like %@",food.foodId,_food);
+//    NSLog(@"food_id %d,food_is_like %@",food.foodId,_food);
     
 //    if (!cell) {
         cell = [[CustomizedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

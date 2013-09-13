@@ -8,13 +8,25 @@
 
 #import "SetDetailViewController.h"
 #import "DetailViewController.h"
+#import "NavigationBarItem.h"
 
 @interface SetDetailViewController ()
 
 @end
 
 @implementation SetDetailViewController
-@synthesize secondView;
+
+static SetDetailViewController *_sharedInstance = nil;
+
++(SetDetailViewController *)sharedInstance{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[SetDetailViewController alloc]init];
+    });
+    
+    return _sharedInstance;
+}
+
 
 - (id)init
 {
@@ -29,18 +41,21 @@
 {
     [super viewDidLoad];
     
-    secondView = [[UINavigationView alloc] initWithFrame:self.view.frame];
-    secondView.backgroundColor=[UIColor yellowColor];
-    [self.view addSubview:secondView];
-        
-    UIButton *popButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [popButton setFrame:CGRectMake(20, 200, 61, 44)];
-    [popButton setTitle:@"Pop3" forState:UIControlStateNormal];
-    [popButton setBackgroundColor:[UIColor clearColor]];
-    [popButton addTarget:[DetailViewController sharedInstance] action:@selector(popView:) forControlEvents:UIControlEventTouchUpInside];
-    [secondView addSubview:popButton];
+    self.title=@"免责声明";
     
+    //自定义导航栏按钮
+    self.navigationItem.leftBarButtonItem=[NavigationBarItem createLeftNavigationBarItemWithNormalImage:@"nav_back" andSelectedImage:@"nav_backSelected.png" controller:[DetailViewController sharedInstance]];
     
+    UIImageView *frameBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundcell"]];
+    [frameBg setFrame:CGRectMake(19, 40, 282, 93)];
+    [self.view addSubview:frameBg];
+    
+    UILabel *claimLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, frameBg.frame.size.width-17, 93-13*2)];
+    claimLabel.font=[UIFont fontWithName:HeitiFont size:13];
+    claimLabel.backgroundColor=[UIColor clearColor];
+    claimLabel.text=@"亲，如果在寻找美食的过程中，如遇到餐馆关门，环境变更等情况，可能是由于商家个人原因造成的数据不匹配，敬请见谅。";
+    claimLabel.numberOfLines=0;
+    [frameBg addSubview:claimLabel];
     
 }
 

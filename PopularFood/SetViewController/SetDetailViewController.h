@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UINavigationView.h"
 
 @interface SetDetailViewController : UIViewController
 
 
-@property(nonatomic,strong) UINavigationView *secondView;
+
++(SetDetailViewController *)sharedInstance;
+
 @end

@@ -120,8 +120,6 @@ const char *optimize_sql = "VACUUM; ANALYZE";
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:MAIN_DATABASE_NAME];
-
-    
     
    /*[DBConnection migrate:@"dbsyj1.0.sql" to:@"dbsyj1.1.sql" queries:@"update_v1.0_to_v1.1.sql"];
     [DBConnection migrate:@"dbsyj1.1.sql" to:@"dbsyj1.2.sql" queries:@"update_v1.1_to_v1.2.sql"];

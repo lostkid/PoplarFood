@@ -46,9 +46,24 @@ static SetDetailViewController *_sharedInstance = nil;
     //自定义导航栏按钮
     self.navigationItem.leftBarButtonItem=[NavigationBarItem createLeftNavigationBarItemWithNormalImage:@"nav_back" andSelectedImage:@"nav_backSelected.png" controller:[DetailViewController sharedInstance]];
     
+    UIImageView *backGroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    backGroundView.frame=CGRectMake(0,0, self.view.frame.size.width, self.view.bounds.size.height-44-StatusBarHeight);
+
+    if (!iPhone5) {
+        backGroundView.frame=CGRectMake(0,44, self.view.frame.size.width, self.view.bounds.size.height-44-20);
+    }
+    
+    backGroundView.contentMode=UIViewContentModeScaleAspectFill;
+    
+    [self.view addSubview:backGroundView];
+    
     UIImageView *frameBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundcell"]];
-    [frameBg setFrame:CGRectMake(19, 40, 282, 93)];
-    [self.view addSubview:frameBg];
+    [frameBg setFrame:CGRectMake(19, 44, 282, 93)];
+
+    if (!iPhone5) {
+        [frameBg setFrame:CGRectMake(19, 0, 282, 93)];
+    }
+    [backGroundView addSubview:frameBg];
     
     UILabel *claimLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, frameBg.frame.size.width-17, 93-13*2)];
     claimLabel.font=[UIFont fontWithName:HeitiFont size:13];

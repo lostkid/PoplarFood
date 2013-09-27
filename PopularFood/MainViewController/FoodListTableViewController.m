@@ -31,7 +31,7 @@
     [super viewDidLoad];
 
     self.tableView.backgroundColor=[UIColor clearColor];
-    self.tableView.backgroundView=nil;
+//    self.tableView.backgroundView=nil;
 
     self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     
@@ -79,8 +79,9 @@
     Food *_food =[FoodInsertDatabase findIsLikeFoodFromLikeTable:food];
 //    NSLog(@"food_id %d,food_is_like %@",food.foodId,_food);
     
-//    if (!cell) {
+    if (cell==nil) {
         cell = [[CustomizedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.backgroundColor=[UIColor clearColor];
         cell.delegate=[TransitionViewController sharedInstance];
 
         if (_food) {
@@ -89,7 +90,7 @@
         
         cell.food=food;
         
-//    }
+    }
     return cell;
 }
 

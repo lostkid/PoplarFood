@@ -15,10 +15,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-        backgroundView.frame=frame;
-        backgroundView.contentMode=UIViewContentModeScaleAspectFit;
-        [self addSubview:backgroundView];
     }
     return self;
 }

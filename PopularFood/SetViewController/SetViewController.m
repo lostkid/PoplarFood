@@ -22,10 +22,14 @@
 
 @implementation SetViewController
 
-static SetViewController *_sharedInstance = nil;
-
 +(SetViewController *)sharedInstance{
     
+    static SetViewController *_sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[SetViewController alloc]init];
+    });
+
     return _sharedInstance;
 }
 
@@ -33,7 +37,7 @@ static SetViewController *_sharedInstance = nil;
 {
     self = [super init];
     if (self) {
-        _sharedInstance=self;
+
     }
     return self;
 }
@@ -51,6 +55,12 @@ static SetViewController *_sharedInstance = nil;
    
     setArray = @[@"版本信息：V1.1",@"免责声明",@"给我们打分"];
     
+    UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    backgroundView.contentMode=UIViewContentModeScaleAspectFill;
+    backgroundView.frame=CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height-44-StatusBarHeight);
+    [self.view addSubview:backgroundView];
+    
+    
     //自定义导航栏按钮
     self.navigationItem.leftBarButtonItem=[NavigationBarItem createLeftNavigationBarItemWithNormalImage:@"nav_back" andSelectedImage:@"nav_backSelected.png" controller:[DetailViewController sharedInstance]];
 
@@ -63,26 +73,30 @@ static SetViewController *_sharedInstance = nil;
     setTableView.layer.cornerRadius=6.0f;
     setTableView.layer.borderColor = [[UIColor grayColor] CGColor];
     setTableView.separatorColor=[UIColor grayColor];
+    if (IOS_Verson==7.0) {
+        setTableView.separatorInset =UIEdgeInsetsZero;
+    }
     [self.view addSubview:setTableView];
+    
+    
 }
 
 //push 设置详情页
 - (void)pushOneSetDetailView{
 
-    SetDetailView *detailView =[[SetDetailView alloc] initWithFrame:CGRectMake(0,44, self.view.frame.size.width, self.view.frame.size.height)];
+    SetDetailView *detailView =[[SetDetailView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height+44)];
+    detailView.backgroundColor=[UIColor yellowColor];
     detailView.delegate=[DetailViewController sharedInstance];
     [[[DetailViewController sharedInstance]firstView] setNextUIView:detailView];
     [detailView setPreUIView:[[DetailViewController sharedInstance]firstView]];
     [[DetailViewController sharedInstance] addSubView:detailView];
     
-    UIViewController *rootVC;
     if (_setType==DisclaimerType) {
         SetDetailViewController *disclaimerVC=[SetDetailViewController sharedInstance];
-        disclaimerVC.view.frame=CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height+44);
-
-        rootVC=disclaimerVC;
-        UINavigationController *navDetailVC =[[UINavigationController alloc] initWithRootViewController:rootVC];
-        navDetailVC.view.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        UINavigationController *navDetailVC =[[UINavigationController alloc] initWithRootViewController:disclaimerVC];
+        navDetailVC.view.frame=CGRectMake(0,StatusBarHeight, detailView.frame.size.width, detailView.frame.size.height);
+        disclaimerVC.view.frame=CGRectMake(0,44, navDetailVC.view.frame.size.width, navDetailVC.view.frame.size.height-44);
+        [navDetailVC.view addSubview:disclaimerVC.view];
         [detailView addSubview:navDetailVC.view];
 
     }else if(_setType==GradeType){
@@ -117,6 +131,7 @@ static SetViewController *_sharedInstance = nil;
 
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.backgroundColor=[UIColor clearColor];
         
         UIView *selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
         selectedView.backgroundColor=[UIColor colorWithRed:178.0f/255.0f green:164.0f/255.0f blue:159.0f/255.0f alpha:0.8f];
@@ -143,15 +158,17 @@ static SetViewController *_sharedInstance = nil;
 
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self pushOneSetDetailView];
 
     if (indexPath.row==1) {
         _setType = DisclaimerType;
         [[DetailViewController sharedInstance] pushView:nil];
-
+        [[[DetailViewController sharedInstance]firstView] setNextUIView:nil];
     }else if(indexPath.row==2){
         _setType = GradeType;
     }
+    
+    [self pushOneSetDetailView];
+    
 }
 
 

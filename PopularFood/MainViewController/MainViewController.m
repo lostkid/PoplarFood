@@ -40,21 +40,21 @@ static MainViewController *_sharedInstance = nil;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    navigationTitles =@[@"人气美食",@"收藏"];
-
-    UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-    backgroundView.contentMode=UIViewContentModeScaleAspectFit;
-    backgroundView.frame=CGRectMake(0,0, self.view.frame.size.width, ContentViewHeight);
-    [self.view addSubview:backgroundView];
+    navigationTitles =@[@"人气面食",@"收藏"];
     
     //自定义导航栏按钮
     self.navigationItem.rightBarButtonItem=[NavigationBarItem createRightNavigationBarItemWithNormalImage:@"setting.png" andSelectedImage:@"settingSelected.png" controller:self];
-    
-    pageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,ContentViewHeight)];
+
+    UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    backgroundView.contentMode=UIViewContentModeScaleAspectFill;
+    backgroundView.frame=CGRectMake(0,0, self.view.bounds.size.width,[UIScreen mainScreen].bounds.size.height-44-20);
+    [self.view addSubview:backgroundView];
+        
+    pageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0,self.view.frame.size.width,backgroundView.frame.size.height)];
     pageScrollView.pagingEnabled = YES;
     pageScrollView.delegate=self;
     pageScrollView.bounces=NO;
-    pageScrollView.contentSize=CGSizeMake(self.view.frame.size.width*2, ContentViewHeight);
+    pageScrollView.contentSize=CGSizeMake(self.view.frame.size.width*2, backgroundView.frame.size.height);
     pageScrollView.showsHorizontalScrollIndicator=NO;
     [self.view addSubview:pageScrollView];
 

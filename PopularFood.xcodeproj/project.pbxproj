@@ -20,13 +20,13 @@
 		C82D844F17E0776B0045BE5F /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82D844E17E0776B0045BE5F /* icon@2x.png */; };
 		C82D845117E0778E0045BE5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82D845017E0778E0045BE5F /* Default-568h@2x.png */; };
 		C83C2FF717CF4AE400F714A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FF617CF4AE400F714A6 /* UIKit.framework */; };
-		C83C2FF917CF4AE400F714A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FF817CF4AE400F714A6 /* Foundation.framework */; };
+		C83C2FF917CF4AE400F714A6 /* Foundation.framework in Resources */ = {isa = PBXBuildFile; fileRef = C83C2FF817CF4AE400F714A6 /* Foundation.framework */; };
 		C83C2FFB17CF4AE400F714A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FFA17CF4AE400F714A6 /* CoreGraphics.framework */; };
 		C83C300117CF4AE400F714A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C83C2FFF17CF4AE400F714A6 /* InfoPlist.strings */; };
 		C83C300317CF4AE400F714A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C300217CF4AE400F714A6 /* main.m */; };
 		C83C300717CF4AE400F714A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C300617CF4AE400F714A6 /* AppDelegate.m */; };
 		C83C300917CF4AE400F714A6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C83C300817CF4AE400F714A6 /* Default.png */; };
-		C83C300B17CF4AE400F714A6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C83C300A17CF4AE400F714A6 /* Default@2x.png */; };
+		C83C300B17CF4AE400F714A6 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C83C300A17CF4AE400F714A6 /* Default~iphone.png */; };
 		C83C301E17CF4CF000F714A6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C301D17CF4CF000F714A6 /* MainViewController.m */; };
 		C83C302117CF4D0400F714A6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C302017CF4D0400F714A6 /* DetailViewController.m */; };
 		C83C302417CF4D1000F714A6 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C302317CF4D1000F714A6 /* SetViewController.m */; };
@@ -66,6 +66,8 @@
 		C845DC3317D5DBBF00F2B211 /* SetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C845DC3217D5DBBF00F2B211 /* SetDetailViewController.m */; };
 		C845DC3617D5E06800F2B211 /* NavigationToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C845DC3517D5E06800F2B211 /* NavigationToolBar.m */; };
 		C874080417DF1344008B09D7 /* foodDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = C874080317DF1344008B09D7 /* foodDatabase.sql */; };
+		C87D3C9417E70BE20008CFDC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87D3C9317E70BE20008CFDC /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C87D6A1917F41883003F6676 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C87D6A1817F41883003F6676 /* icon.png */; };
 		C898A6A317D81E3E00AC1CB5 /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C898A68817D81E3E00AC1CB5 /* NSData+GIF.m */; };
 		C898A6A417D81E3E00AC1CB5 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C898A68A17D81E3E00AC1CB5 /* SDImageCache.m */; };
 		C898A6A517D81E3E00AC1CB5 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = C898A68C17D81E3E00AC1CB5 /* SDWebImageCompat.m */; };
@@ -85,6 +87,7 @@
 		C898A77317D86AC100AC1CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C898A77217D86AC100AC1CB5 /* libsqlite3.0.dylib */; };
 		C8A0AB7717DD6F3600F9FDC2 /* LoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = C841AC7717D9C2930091F87C /* LoadMoreView.m */; };
 		C8A0AB7A17DDBD2A00F9FDC2 /* DetailImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A0AB7917DDBD2A00F9FDC2 /* DetailImageView.m */; };
+		C8B5153417E2B059006166A5 /* 512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B5153317E2B059006166A5 /* 512x512.png */; };
 		C8D3D94217D4246D00FFB32B /* UINavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D3D94117D423E800FFB32B /* UINavigationView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8D3D94717D4312F00FFB32B /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D3D94617D4312F00FFB32B /* TransitionViewController.m */; };
 		C8D3D94A17D489FE00FFB32B /* FoodClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D3D94917D489FE00FFB32B /* FoodClient.m */; };
@@ -111,7 +114,7 @@
 		C824F62517E1C27D00F3962B /* GradeUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeUsViewController.m; sourceTree = "<group>"; };
 		C82D844E17E0776B0045BE5F /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		C82D845017E0778E0045BE5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C83C2FF317CF4AE400F714A6 /* PopularFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopularFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83C2FF317CF4AE400F714A6 /* 人气面食.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "人气面食.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83C2FF617CF4AE400F714A6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C83C2FF817CF4AE400F714A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C83C2FFA17CF4AE400F714A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,7 +125,7 @@
 		C83C300517CF4AE400F714A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C83C300617CF4AE400F714A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C83C300817CF4AE400F714A6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C83C300A17CF4AE400F714A6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C83C300A17CF4AE400F714A6 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		C83C301C17CF4CF000F714A6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C83C301D17CF4CF000F714A6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C83C301F17CF4D0400F714A6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 		C845DC3417D5E06800F2B211 /* NavigationToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationToolBar.h; sourceTree = "<group>"; };
 		C845DC3517D5E06800F2B211 /* NavigationToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationToolBar.m; sourceTree = "<group>"; };
 		C874080317DF1344008B09D7 /* foodDatabase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = foodDatabase.sql; sourceTree = "<group>"; };
+		C87D3C9317E70BE20008CFDC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C87D6A1817F41883003F6676 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C898A68717D81E3E00AC1CB5 /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
 		C898A68817D81E3E00AC1CB5 /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
 		C898A68917D81E3E00AC1CB5 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -220,6 +225,7 @@
 		C898A77217D86AC100AC1CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C8A0AB7817DDBD2A00F9FDC2 /* DetailImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailImageView.h; sourceTree = "<group>"; };
 		C8A0AB7917DDBD2A00F9FDC2 /* DetailImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailImageView.m; sourceTree = "<group>"; };
+		C8B5153317E2B059006166A5 /* 512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512x512.png; sourceTree = "<group>"; };
 		C8D3D94017D423E800FFB32B /* UINavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UINavigationView.h; sourceTree = "<group>"; };
 		C8D3D94117D423E800FFB32B /* UINavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UINavigationView.m; sourceTree = "<group>"; };
 		C8D3D94517D4312F00FFB32B /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
@@ -242,11 +248,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87D3C9417E70BE20008CFDC /* AdSupport.framework in Frameworks */,
 				C841AC7917D9C2F70091F87C /* QuartzCore.framework in Frameworks */,
 				C898A77317D86AC100AC1CB5 /* libsqlite3.0.dylib in Frameworks */,
 				C8D3D9B517D48F7C00FFB32B /* ImageIO.framework in Frameworks */,
 				C83C2FF717CF4AE400F714A6 /* UIKit.framework in Frameworks */,
-				C83C2FF917CF4AE400F714A6 /* Foundation.framework in Frameworks */,
 				C83C2FFB17CF4AE400F714A6 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +297,7 @@
 		C83C2FF417CF4AE400F714A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C83C2FF317CF4AE400F714A6 /* PopularFood.app */,
+				C83C2FF317CF4AE400F714A6 /* 人气面食.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 		C83C2FF517CF4AE400F714A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C87D3C9317E70BE20008CFDC /* AdSupport.framework */,
 				C841AC7817D9C2F70091F87C /* QuartzCore.framework */,
 				C898A77217D86AC100AC1CB5 /* libsqlite3.0.dylib */,
 				C8D3D9B417D48F7C00FFB32B /* ImageIO.framework */,
@@ -339,8 +346,10 @@
 				C83C300217CF4AE400F714A6 /* main.m */,
 				C83C300417CF4AE400F714A6 /* PopularFood-Prefix.pch */,
 				C83C300817CF4AE400F714A6 /* Default.png */,
-				C83C300A17CF4AE400F714A6 /* Default@2x.png */,
+				C83C300A17CF4AE400F714A6 /* Default~iphone.png */,
 				C82D844E17E0776B0045BE5F /* icon@2x.png */,
+				C87D6A1817F41883003F6676 /* icon.png */,
+				C8B5153317E2B059006166A5 /* 512x512.png */,
 				C82D845017E0778E0045BE5F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -602,7 +611,7 @@
 			);
 			name = PopularFood;
 			productName = PopularFood;
-			productReference = C83C2FF317CF4AE400F714A6 /* PopularFood.app */;
+			productReference = C83C2FF317CF4AE400F714A6 /* 人气面食.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -637,8 +646,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83C300117CF4AE400F714A6 /* InfoPlist.strings in Resources */,
+				C83C2FF917CF4AE400F714A6 /* Foundation.framework in Resources */,
 				C83C300917CF4AE400F714A6 /* Default.png in Resources */,
-				C83C300B17CF4AE400F714A6 /* Default@2x.png in Resources */,
+				C83C300B17CF4AE400F714A6 /* Default~iphone.png in Resources */,
 				C845DC1517D579CB00F2B211 /* background@2x.png in Resources */,
 				C845DC1617D579CB00F2B211 /* cell@2x.png in Resources */,
 				C845DC1717D579CB00F2B211 /* collect@2x.png in Resources */,
@@ -656,6 +666,7 @@
 				C841AC6F17D9B24E0091F87C /* blueArrow@2x.png in Resources */,
 				C841AC7017D9B24E0091F87C /* grayArrow.png in Resources */,
 				C841AC7117D9B24E0091F87C /* grayArrow@2x.png in Resources */,
+				C87D6A1917F41883003F6676 /* icon.png in Resources */,
 				C841AC7217D9B24E0091F87C /* lightGrayArrow@2x.png in Resources */,
 				C841AC7317D9B24E0091F87C /* whiteArrow.png in Resources */,
 				C841AC7417D9B24E0091F87C /* whiteArrow@2x.png in Resources */,
@@ -670,6 +681,7 @@
 				C824F61517E154B300F3962B /* 设置页 效果图.png in Resources */,
 				C824F61F17E1A5EC00F3962B /* arrow@2x.png in Resources */,
 				C824F62017E1A5EC00F3962B /* arrowSelected@2x.png in Resources */,
+				C8B5153417E2B059006166A5 /* 512x512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +781,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
@@ -794,7 +806,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
@@ -805,6 +817,7 @@
 		C83C301717CF4AE400F714A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PopularFood/ThirdPartyCode\"",
@@ -812,8 +825,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PopularFood/PopularFood-Prefix.pch";
 				INFOPLIST_FILE = "PopularFood/PopularFood-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "人气面食";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -821,6 +834,7 @@
 		C83C301817CF4AE400F714A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PopularFood/ThirdPartyCode\"",
@@ -828,8 +842,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PopularFood/PopularFood-Prefix.pch";
 				INFOPLIST_FILE = "PopularFood/PopularFood-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "人气面食";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

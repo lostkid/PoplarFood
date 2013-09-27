@@ -49,10 +49,19 @@ static TransitionViewController *_sharedInstance = nil;
     [self.view addSubview:rootView];
     [self setCurrentView:rootView];
     
+//    NSInteger marginTop;
+    
+//    if (IOS_Verson==7.0) {
+//        marginTop=20;
+//    }else{
+//        marginTop=0;
+//    }
+
     MainViewController *mainVC =[[MainViewController alloc] init];
     mainVC.delegate=self;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    mainVC.view.frame=CGRectMake(0,44, self.view.frame.size.width, ContentViewHeight);
+    nav.view.frame=CGRectMake(0,StatusBarHeight, self.view.frame.size.width, self.view.bounds.size.height);
+    
     [rootView addSubview:nav.view];
     [self addChildViewController:nav];
     

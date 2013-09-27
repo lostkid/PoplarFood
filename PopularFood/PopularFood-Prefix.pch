@@ -15,6 +15,11 @@
 
 #define MAIN_DATABASE_NAME @"foodDatabase.sql"
 
-#define ContentViewHeight 504
 
 #define HeitiFont @"Helvetica-Bold"
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IOS_Verson [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define StatusBarHeight ([[[UIDevice currentDevice] systemVersion] floatValue]==7.0?20:0)

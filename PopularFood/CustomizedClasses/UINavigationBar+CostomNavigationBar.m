@@ -27,7 +27,15 @@
     
     UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:17];
     
-    NSDictionary *attr = [[NSDictionary alloc] initWithObjectsAndKeys:font, UITextAttributeFont,[UIColor whiteColor],UITextAttributeTextColor, nil];
+    NSDictionary *attr;
+    
+    if (IOS_Verson==5.0f) {
+        attr = [[NSDictionary alloc] initWithObjectsAndKeys:font,UITextAttributeFont,[UIColor whiteColor],UITextAttributeTextColor,[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0],UITextAttributeTextShadowColor,[NSValue valueWithUIOffset:UIOffsetMake(0, 0.5)],UITextAttributeTextShadowOffset,nil];
+
+    }else{
+        attr = [[NSDictionary alloc] initWithObjectsAndKeys:font, NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];
+    }
+    
     [self setTitleTextAttributes:attr];
     
 }

@@ -22,7 +22,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle=UITableViewCellSelectionStyleNone;
-
+        
         UIImageView *imageBackgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(6, 15/2, 308, 147)];
         [imageBackgroundView setImage:[UIImage imageNamed:@"cell.png"]];
         [self.contentView addSubview:imageBackgroundView];

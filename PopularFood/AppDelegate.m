@@ -9,21 +9,34 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "DBConnection.h"
+//#import <AdSupport/AdSupport.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
     [DBConnection createEditableCopyOfDatabaseIfNeeded:NO];
     [DBConnection getSharedDatabase];
 
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];    
-
+    
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     [self.window setRootViewController:detailVC];
     [self.window makeKeyAndVisible];
     
-       
+//    NSString *uuid = [[NSUUID UUID] UUIDString];    
+//    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];   
+//    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];   
+//    NSLog(@"uuid%@",uuid);
+//    NSLog(@"idfv%@",idfv);
+//    NSLog(@"adId%@",adId);
+//    uuid098B9F8C-AF57-4480-A180-4F4D641C8F31
+//    2013-09-16 17:52:41.516 人气面食[8481:c07] idfv86820DC9-7EF5-4134-AD42-964612997434   /*同个应用同个设备相同*/
+//    2013-09-16 17:52:41.516 人气面食[8481:c07] adId9D95D7BE-E0F1-4690-88EA-AAD93032141B   /*同个应用同个设备相同*/
+
     return YES;
 }
 

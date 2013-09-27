@@ -36,20 +36,16 @@ static DetailViewController *_sharedInstance = nil;
 {
     [super viewDidLoad];
 
-    self.view.backgroundColor=[UIColor clearColor];
+    self.view.backgroundColor=[UIColor yellowColor];
 
-    firstView = [[UINavigationView alloc] initWithFrame:self.view.bounds];
+    firstView = [[UINavigationView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height)];
     firstView.delegate = self;
     [self.rootView setNextUIView:firstView];
     [firstView setPreUIView:self.rootView];
     firstView.backgroundColor=[UIColor clearColor];
     [self addSubView:firstView];
     
-    UIImageView *backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-    backgroundView.contentMode=UIViewContentModeScaleAspectFit;
-    backgroundView.frame=CGRectMake(0,44, self.view.frame.size.width, ContentViewHeight);
-    [firstView addSubview:backgroundView];
-
+    firstView.backgroundColor=[UIColor redColor];
     
 }
 
@@ -73,16 +69,14 @@ static DetailViewController *_sharedInstance = nil;
         
     }else{
         setVC = [[SetViewController alloc] init];
-        setVC.view.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
         
     }
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:setVC];
-    nav.view.frame=CGRectMake(0, 0, setVC.view.frame.size.width, setVC.view.frame.size.height);
+    nav.view.frame=CGRectMake(0, StatusBarHeight, self.view.frame.size.width, self.view.frame.size.height);
+    setVC.view.frame=CGRectMake(0,44, self.view.bounds.size.width, self.view.bounds.size.height);
     [firstView addSubview:nav.view];
     [self addChildViewController:nav];
-    
-    
-
 }
 
 #pragma mark--移除SetViewController

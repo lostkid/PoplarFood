@@ -118,6 +118,7 @@ static MainViewController *_sharedInstance = nil;
     }else{
         tableViewType=LikeTableViewType;
         favouredFoodViewController.foodListArray=[self getFavFoodArray];//收藏表中查询
+    
     }
 }
 
@@ -162,7 +163,10 @@ static MainViewController *_sharedInstance = nil;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    
+    if ([self isViewLoaded] && self.view.window == nil) {
+        self.view = nil;
+    }
+    _totalArrays=nil;
 }
 
 @end

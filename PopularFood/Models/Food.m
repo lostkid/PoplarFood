@@ -37,13 +37,13 @@
   
 //    [[FoodClient sharedClient] getPath:@"business/find_businesses" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
     
-        NSArray *foodArray = [self getFood];
+        NSArray *foodArray = [FoodInsertDatabase getFoodFromSqliteWithoutNet];
         
-        for (int i=0; i<foodArray.count; i++) {
-            Food *food =[foodArray objectAtIndex:i];
-            [FoodInsertDatabase insertDB:food];
-        }
-        
+//        for (int i=0; i<foodArray.count; i++) {
+//            Food *food =[foodArray objectAtIndex:i];
+//            [FoodInsertDatabase insertDB:food];
+//        }
+    
 
 //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 //        

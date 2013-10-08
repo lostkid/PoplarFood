@@ -57,7 +57,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([self isViewLoaded] && self.view.window == nil) {
+        self.view = nil;
+    }
+    _foodListArray=nil;
 }
 
 #pragma mark - Table view data source
@@ -79,7 +82,7 @@
     Food *_food =[FoodInsertDatabase findIsLikeFoodFromLikeTable:food];
 //    NSLog(@"food_id %d,food_is_like %@",food.foodId,_food);
     
-    if (cell==nil) {
+    if (cell==nil||food) {
         cell = [[CustomizedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.backgroundColor=[UIColor clearColor];
         cell.delegate=[TransitionViewController sharedInstance];
@@ -166,6 +169,8 @@
 {
     return [NSDate date];
 }
+
+
 
 
 @end

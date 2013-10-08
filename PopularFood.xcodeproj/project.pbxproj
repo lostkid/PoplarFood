@@ -20,7 +20,7 @@
 		C82D844F17E0776B0045BE5F /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82D844E17E0776B0045BE5F /* icon@2x.png */; };
 		C82D845117E0778E0045BE5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C82D845017E0778E0045BE5F /* Default-568h@2x.png */; };
 		C83C2FF717CF4AE400F714A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FF617CF4AE400F714A6 /* UIKit.framework */; };
-		C83C2FF917CF4AE400F714A6 /* Foundation.framework in Resources */ = {isa = PBXBuildFile; fileRef = C83C2FF817CF4AE400F714A6 /* Foundation.framework */; };
+		C83C2FF917CF4AE400F714A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FF817CF4AE400F714A6 /* Foundation.framework */; };
 		C83C2FFB17CF4AE400F714A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83C2FFA17CF4AE400F714A6 /* CoreGraphics.framework */; };
 		C83C300117CF4AE400F714A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C83C2FFF17CF4AE400F714A6 /* InfoPlist.strings */; };
 		C83C300317CF4AE400F714A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C83C300217CF4AE400F714A6 /* main.m */; };
@@ -251,6 +251,7 @@
 				C87D3C9417E70BE20008CFDC /* AdSupport.framework in Frameworks */,
 				C841AC7917D9C2F70091F87C /* QuartzCore.framework in Frameworks */,
 				C898A77317D86AC100AC1CB5 /* libsqlite3.0.dylib in Frameworks */,
+				C83C2FF917CF4AE400F714A6 /* Foundation.framework in Frameworks */,
 				C8D3D9B517D48F7C00FFB32B /* ImageIO.framework in Frameworks */,
 				C83C2FF717CF4AE400F714A6 /* UIKit.framework in Frameworks */,
 				C83C2FFB17CF4AE400F714A6 /* CoreGraphics.framework in Frameworks */,
@@ -646,7 +647,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83C300117CF4AE400F714A6 /* InfoPlist.strings in Resources */,
-				C83C2FF917CF4AE400F714A6 /* Foundation.framework in Resources */,
 				C83C300917CF4AE400F714A6 /* Default.png in Resources */,
 				C83C300B17CF4AE400F714A6 /* Default~iphone.png in Resources */,
 				C845DC1517D579CB00F2B211 /* background@2x.png in Resources */,

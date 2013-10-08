@@ -45,7 +45,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    if ([self isViewLoaded] && self.view.window == nil) {
+        self.view = nil;
+    }
+
 }
 
 - (void)viewDidLoad
@@ -85,7 +89,7 @@
 - (void)pushOneSetDetailView{
 
     SetDetailView *detailView =[[SetDetailView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height+44)];
-    detailView.backgroundColor=[UIColor yellowColor];
+    detailView.backgroundColor=[UIColor clearColor];
     detailView.delegate=[DetailViewController sharedInstance];
     [[[DetailViewController sharedInstance]firstView] setNextUIView:detailView];
     [detailView setPreUIView:[[DetailViewController sharedInstance]firstView]];

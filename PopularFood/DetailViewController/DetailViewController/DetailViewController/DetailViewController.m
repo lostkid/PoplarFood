@@ -36,7 +36,7 @@ static DetailViewController *_sharedInstance = nil;
 {
     [super viewDidLoad];
 
-    self.view.backgroundColor=[UIColor yellowColor];
+    self.view.backgroundColor=[UIColor clearColor];
 
     firstView = [[UINavigationView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height)];
     firstView.delegate = self;
@@ -45,7 +45,7 @@ static DetailViewController *_sharedInstance = nil;
     firstView.backgroundColor=[UIColor clearColor];
     [self addSubView:firstView];
     
-    firstView.backgroundColor=[UIColor redColor];
+    firstView.backgroundColor=[UIColor clearColor];
     
 }
 
@@ -92,7 +92,11 @@ static DetailViewController *_sharedInstance = nil;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    if ([self isViewLoaded] && self.view.window == nil) {
+        self.view = nil;
+    }
+
 }
 
 @end
